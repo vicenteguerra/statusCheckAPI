@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
     mainCronJob: {
         task: async ({ strapi }) => {            
-            console.log('Cron job is running...');
+            console.log('Cron job is running');
             const {results: sites} = await strapi.services['api::site.site'].find();
             sites.forEach(async site => {                
                 let {lastRunning, pulseSeconds} = site;
