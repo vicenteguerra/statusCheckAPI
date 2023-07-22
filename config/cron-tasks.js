@@ -26,8 +26,7 @@ module.exports = {
 }
 
 async function checkSite(site, now){
-    return new Promise((resolve, reject) => {
-        console.log("Running site: " + site.name, now);        
+    return new Promise((resolve, reject) => {         
         axios.get(site.url)
         .then(response => {
             const end = new Date().getTime();
