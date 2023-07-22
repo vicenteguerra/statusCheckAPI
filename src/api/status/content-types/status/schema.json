@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statuses",
+  "info": {
+    "singularName": "status",
+    "pluralName": "statuses",
+    "displayName": "Status"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "site": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::site.site",
+      "inversedBy": "statuses"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "responseCode": {
+      "type": "integer"
+    },
+    "responseMiliseconds": {
+      "type": "integer"
+    }
+  }
+}
